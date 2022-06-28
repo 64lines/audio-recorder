@@ -1,3 +1,6 @@
+/**
+ * Time class to add 'sleeps' when necessary.
+ */
 class Time {
   static async sleep(time) {
     return new Promise(resolve => setTimeout(resolve, time * 1000));
@@ -8,7 +11,7 @@ class Time {
  * Recorder classs created to record audio using the browser microphone.
  */
 class Recorder {
-  
+
   static async createRecorder() {
     return new Promise(async resolve => {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
